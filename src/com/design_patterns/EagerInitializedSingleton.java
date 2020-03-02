@@ -1,4 +1,4 @@
-package com.design_pattern;
+package com.design_patterns;
 
 public class EagerInitializedSingleton {
 
