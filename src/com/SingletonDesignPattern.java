@@ -2,6 +2,7 @@ package com;
 
 import com.design_patterns.BillPughSingleton;
 import com.design_patterns.EagerInitializedSingleton;
+import com.design_patterns.EnumSingleton;
 import com.design_patterns.LazyInitializedSingleton;
 import com.design_patterns.StaticBlockSingleton;
 import com.design_patterns.ThreadSafeSingleton;
@@ -54,17 +55,31 @@ public class SingletonDesignPattern {
 		System.out.println("hashcode return value:" + threadSafeSingleton1.hashCode());
 		System.out.println("hashcode return value:" + threadSafeSingleton2.hashCode());
 		System.out.println("##########################################\n\n");
-		
+
 		System.out.println("##########################################");
 		System.out.println("5. Bill Pugh Singleton ");
 		System.out.println("calling static method to get instance...");
-		BillPughSingleton  billPughSingleton1  = BillPughSingleton.getInstance();
-		BillPughSingleton  billPughSingleton2  = BillPughSingleton.getInstance();
+		BillPughSingleton billPughSingleton1 = BillPughSingleton.getInstance();
+		BillPughSingleton billPughSingleton2 = BillPughSingleton.getInstance();
 
 		System.out.println("checking both object...");
 		System.out.println("hashcode return value:" + billPughSingleton1.hashCode());
 		System.out.println("hashcode return value:" + billPughSingleton2.hashCode());
 		System.out.println("##########################################\n\n");
+		
+		System.out.println("##########################################");
+		System.out.println("6. Enum Singleton ");
+		System.out.println("calling static method to get instance...");
+		EnumSingleton enumSingleton1 = EnumSingleton.INSTANCE;
+		EnumSingleton enumSingleton2 = EnumSingleton.INSTANCE;
+
+		System.out.println("checking both object...");
+		System.out.println("hashcode return value:" + enumSingleton1.hashCode());
+		System.out.println("hashcode return value:" + enumSingleton2.hashCode());
+		System.out.println("##########################################\n\n");
+
+
+
 
 		System.out.println("Exiting SingletonDesignPattern.main()...");
 
